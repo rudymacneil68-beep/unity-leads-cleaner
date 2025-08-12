@@ -1,1 +1,25 @@
-{"pages": 5, "autoClickOK": true}
+{
+  "startUrl": "https://crm.unitypay.ca/Welcome/Leads",
+  "pagesToProcess": 5,
+  "login": {
+    "url": "https://crm.unitypay.ca/login",
+    "emailSelector": "input[name='Email'], #Email, input[type='email']",
+    "passwordSelector": "input[name='Password'], #Password, input[type='password']",
+    "submitSelector": "button[type='submit'], input[type='submit']"
+  },
+  "selectors": {
+    "leadRows": "table tbody tr",
+    "leadIdCell": "td:nth-child(1)",
+    "statusCell": "td:nth-child(5)",
+    "openLeadAction": "",
+    "closerMarkerText": "closer",
+    "badLeadTextContains": ["don't call", "do not call", "invalid", "bounced", "duplicate", "oob", "out of business"],
+    "scrapButton": "button.scrap, .btn-scrap, [data-action='scrap']",
+    "confirmOkButton": "text=OK, text=Confirm, [role='dialog'] button:has-text('OK'), .swal2-confirm",
+    "nextPageButton": "button.next-page, .pagination .next a, a[rel='next']"
+  },
+  "timeouts": {
+    "nav": 25000,
+    "afterAction": 400
+  }
+}
